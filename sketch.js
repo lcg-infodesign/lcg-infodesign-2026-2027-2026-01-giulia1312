@@ -143,8 +143,11 @@ function draw() {
 
   // Coordinate
   fill(255); 
-  text(`mouseX: ${mouseX}, mouseY: ${mouseY}`, 20, 20);
+  text("mouseX: ${mouseX}, mouseY: ${mouseY}", 20, 20);
 
-  // A ogni ciclo il valore della variabile xCloud viene aumentato di 1
-  xCloud = (xCloud + 1) % 800;
+  xCloud = xCloud + 1;
+  if (xCloud > 800) { 
+  xCloud = 0;
+}
+
 }
